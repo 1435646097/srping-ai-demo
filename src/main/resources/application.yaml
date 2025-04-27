@@ -1,0 +1,27 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: spring-ai-demo
+  profiles:
+    active: dev
+  ai:
+    openai:
+      api-key: sk-qdf7XHJW079CyxUXH5BiderBsnN4UOZ0UaSnXC3qeyfaGb70
+      base-url: https://opus.gptuu.com
+      chat:
+        options:
+          model: gpt-4o-2024-11-20
+    chat:
+      memory:
+        repository:
+          jdbc:
+            initialize-schema: false
+logging:
+  level:
+    org:
+      springframework:
+        ai:
+          chat:
+            client:
+              advisor: DEBUG
