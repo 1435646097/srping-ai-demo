@@ -5,6 +5,10 @@ spring:
     name: spring-ai-demo
   profiles:
     active: dev
+  datasource:
+    url: jdbc:postgresql://10.163.96.113:25432/siteweb
+    username: postgres
+    password: postgres
   ai:
     openai:
       api-key: sk-qdf7XHJW079CyxUXH5BiderBsnN4UOZ0UaSnXC3qeyfaGb70
@@ -12,11 +16,20 @@ spring:
       chat:
         options:
           model: gpt-4o-2024-11-20
+      embedding:
+        options:
+          model: text-embedding-3-small
     chat:
       memory:
         repository:
           jdbc:
             initialize-schema: false
+    vectorstore:
+      pgvector:
+        index-type: HNSW
+        distance-type: COSINE_DISTANCE
+        dimensions: 1536
+        max-document-batch-size: 10000 # Optional: Maximum number of documents per batch
 logging:
   level:
     org:
