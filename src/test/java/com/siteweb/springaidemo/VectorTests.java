@@ -38,7 +38,7 @@ public class VectorTests {
                         "MySQL 中的“safe update”模式是一种保护机制，旨在防止意外更改或删除数据。当启用该模式时，MySQL 会阻止执行没有 WHERE 子句的 UPDATE 和 DELETE 语句，以及那些 WHERE 子句不包含主键或唯一索引列的语句。\n" +
                         "要禁用“安全更新”模式，您可以在脚本前使用以下命令：\n" +
                         "SET SQL_SAFE_UPDATES = 0;",Map.of("title","使用MySQL Workbench提示You are using safe update model")),
-                new Document("new Document(\"使用MySQL Workbench提示You are using safe update model\\n\" +\n" +
+                new Document("使用MySQL Workbench提示You are using safe update model\\n\" +\n" +
                         "                        \"MySQL 中的“safe update”模式是一种保护机制，旨在防止意外更改或删除数据。当启用该模式时，MySQL 会阻止执行没有 WHERE 子句的 UPDATE 和 DELETE 语句，以及那些 WHERE 子句不包含主键或唯一索引列的语句。\\n\" +\n" +
                         "                        \"要禁用“安全更新”模式，您可以在脚本前使用以下命令：\\n\" +\n" +
                         "                        \"SET SQL_SAFE_UPDATES = 0;\")",Map.of("title","使用MySQL Workbench提示You are using safe update model")));
